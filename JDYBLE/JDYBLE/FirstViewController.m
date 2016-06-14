@@ -13,7 +13,9 @@
 @interface FirstViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (nonatomic, strong) NSMutableArray *dataArr;
+@property (nonatomic, strong) NSMutableDictionary *dic;
 
+@property (weak, nonatomic) IBOutlet UIView *acView;
 
 @property (nonatomic, strong)JDYBLEManager *jdyBLEmanager;
 
@@ -25,10 +27,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.dataArr = [NSMutableArray array];
+    self.dic = [NSMutableDictionary dictionary];
     
     self.jdyBLEmanager = [JDYBLEManager shareInstance];
     [_jdyBLEmanager setCBCentralStatusChangeBlock:^(CBCentralManagerState status) {
-        NSLog(@"蓝牙状态改变= %ld", status);
+        NSLog(@"蓝牙状态改变= %ld", (long)status);
     }];
 }
 
@@ -48,11 +51,16 @@
 }
 
 - (void)dataArrAddobject:(id)object {
-    [_myTableView beginUpdates];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_dataArr.count inSection:0];
-    [_dataArr addObject:object];
-    [_myTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-    [_myTableView endUpdates];
+    
+    if ([_dataArr indexOfObject:object] == NSNotFound) {
+        [_myTableView beginUpdates];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_dataArr.count inSection:0];
+        [_dataArr addObject:object];
+        [_myTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        [_myTableView endUpdates];
+    }
+    
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -77,22 +85,33 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    CBPeripheral *peripheral = _dataArr[indexPath.row];
     
-    JDYBLEMessage *jdyMessage = [_jdyBLEmanager connectPerpheral:peripheral connectStateChangeBlock:^(PeripheralConnectState state, NSError *error) {
-        NSLog(@"连接状态：%ld", state);
-    }];
+    self.acView.hidden = NO;
     
     [_jdyBLEmanager stopScanning];
     
-    DataViewController *vc = [[DataViewController alloc] init];
-    vc.jdyMessage = jdyMessage;
-    [self.navigationController pushViewController:vc animated:YES];
-    
+    CBPeripheral *peripheral = _dataArr[indexPath.row];
+    __weak __typeof(self)weakSelf = self;
+    JDYBLEMessage *jdyMessage = [_jdyBLEmanager connectPerpheral:peripheral connectStateChangeBlock:^(PeripheralConnectState state, NSError *error) {
+        NSLog(@"连接状态：%ld", (long)state);
+        
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        
+        strongSelf.acView.hidden = YES;
+        
+        if (state == PeripheralConnectStateDidConnectPeripheral){
+            
+            JDYBLEMessage *jdyMessage = [strongSelf.dic objectForKey:peripheral];
+            DataViewController *vc = [[DataViewController alloc] init];
+            vc.jdyMessage = jdyMessage;
+            [strongSelf.navigationController pushViewController:vc animated:YES];
+            
+        }else if (state == PeripheralConnectStateDidDisconnectPeripheral){
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+    }];
+    [self.dic setObject:jdyMessage forKey:peripheral];
 }
 
-- (void)nextVC {
-    
-}
 
 @end

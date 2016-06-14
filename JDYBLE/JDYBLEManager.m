@@ -6,7 +6,8 @@
 //  Copyright © 2016年 zengqingfu. All rights reserved.
 //
 //sdk版本号
-#define JDYBLE_VERSION @"0.0.1";
+#define JDYBLE_VERSION @"0.0.2";
+
 #import "JDYBLEManager.h"
 
 @interface JDYBLEModel : NSObject
@@ -65,8 +66,8 @@
 }
 
 - (void)setupVarWithQueue:(nullable dispatch_queue_t)queue {
-    self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:queue];
     self.per2messageDic = [NSMutableDictionary dictionary];
+    self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:queue];
 }
 
 - (void)setCBCentralStatusChangeBlock:(void (^)(CBCentralManagerState status))block {

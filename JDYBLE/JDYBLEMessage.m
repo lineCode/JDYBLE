@@ -6,19 +6,19 @@
 //  Copyright © 2016年 zengqingfu. All rights reserved.
 //
 
-#define kMPOSServiceUUID @"49535343-FE7D-4AE5-8FA9-9FAFD205E455"
-#define kMPOSWriteUUID @"49535343-8841-43F4-A8D4-ECBE34729BB3"
-#define kMPOSNofifyUUID @"49535343-1E4D-4BD9-BA61-23C647249616"
+#define kJDYServiceUUID @"49535343-FE7D-4AE5-8FA9-9FAFD205E455"
+#define kJDYWriteUUID @"49535343-8841-43F4-A8D4-ECBE34729BB3"
+#define kJDYNofifyUUID @"49535343-1E4D-4BD9-BA61-23C647249616"
 
 #import "JDYBLEMessage.h"
 
 @interface JDYBLEMessage()
 
-@property (nonatomic, readonly)CBPeripheral *peripheral;
+
 //UUID
-@property (nonatomic, strong)CBUUID *mPosServiceUUID;
-@property (nonatomic, strong)CBUUID *mPosNofifyUUID;
-@property (nonatomic, strong)CBUUID *mPosWriteUUID;
+@property (nonatomic, strong)CBUUID *mJDYServiceUUID;
+@property (nonatomic, strong)CBUUID *mJDYNofifyUUID;
+@property (nonatomic, strong)CBUUID *mJDYWriteUUID;
 
 //特征值
 @property (nonatomic, strong)CBCharacteristic *mPosNotifyCharacteristic;
@@ -33,9 +33,9 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.mPosServiceUUID = [CBUUID UUIDWithString:kMPOSServiceUUID];
-        self.mPosNofifyUUID  = [CBUUID UUIDWithString:kMPOSNofifyUUID];
-        self.mPosWriteUUID   = [CBUUID UUIDWithString:kMPOSWriteUUID];
+        self.mJDYServiceUUID = [CBUUID UUIDWithString:kJDYServiceUUID];
+        self.mJDYNofifyUUID  = [CBUUID UUIDWithString:kJDYNofifyUUID];
+        self.mJDYWriteUUID   = [CBUUID UUIDWithString:kJDYWriteUUID];
     }
     return self;
 }
@@ -54,12 +54,17 @@
 #pragma mark --pravate--
 - (void)foundService {
     [self whenDisconnectBT];
-    [_peripheral discoverServices:@[_mPosServiceUUID]];
+    [_peripheral discoverServices:@[_mJDYServiceUUID]];
 }
 
 - (void)whenDisconnectBT {
     _canReceiveData = NO;
     _canSendData = NO;
+    
+    if (_mPosNotifyCharacteristic.isNotifying) {
+        [_peripheral setNotifyValue:NO forCharacteristic:_mPosNotifyCharacteristic];
+    }
+    
     _mPosNotifyCharacteristic = nil;
     _mPosWriteCharacteristic = nil;
 }
@@ -68,7 +73,7 @@
 //------peripheraldelegate
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
     for (CBService *service in peripheral.services) {
-        if ([service.UUID.data isEqualToData:_mPosServiceUUID.data]) {
+        if ([service.UUID.data isEqualToData:_mJDYServiceUUID.data]) {
             [_peripheral discoverCharacteristics:nil forService:service];
         }
     }
@@ -77,12 +82,12 @@
 //发现特征
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
     for (CBCharacteristic *c in service.characteristics) {
-        if ([c.UUID.data isEqualToData:_mPosNofifyUUID.data]) {
+        if ([c.UUID.data isEqualToData:_mJDYNofifyUUID.data]) {
             self.mPosNotifyCharacteristic = c;
             [_peripheral setNotifyValue:YES forCharacteristic:c];
             _canReceiveData = YES;
             continue;
-        }else if ([c.UUID.data isEqualToData:_mPosWriteUUID.data]) {
+        }else if ([c.UUID.data isEqualToData:_mJDYWriteUUID.data]) {
             self.mPosWriteCharacteristic = c;
             _canSendData= YES;
             continue;

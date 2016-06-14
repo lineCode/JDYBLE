@@ -43,4 +43,5 @@ typedef NS_ENUM(NSInteger, PeripheralConnectState) {
 - (JDYBLEMessage *)connectPerpheral:(CBPeripheral *)peripheral connectStateChangeBlock:(void (^)(PeripheralConnectState state, NSError *error)) block;
 //断开连接
 - (void)disConnectBT:(CBPeripheral *)peripheral;
+
 @end

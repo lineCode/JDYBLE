@@ -7,6 +7,7 @@
 //
 
 #import "DataViewController.h"
+#import "JDYBLEManager.h"
 
 @interface DataViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
@@ -17,14 +18,18 @@
 
 @implementation DataViewController
 
+- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    __weak __typeof(self)weakSelf = self;
-    
     self.showStr = [NSMutableString string];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"断开连接" style:UIBarButtonItemStylePlain target:self action:@selector(disConnectBT)];
+    self.navigationItem.rightBarButtonItem = item;
+    
+    __weak __typeof(self)weakSelf = self;
     [_jdyMessage setReceiveMessageBlock:^(NSData *data, NSError *error) {
-        
         __strong __typeof(weakSelf)strongSelf = weakSelf;
         NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSLog(@"接收到消息%@", str);
@@ -32,6 +37,10 @@
         [strongSelf.showStr appendString:str];
         strongSelf.myTextView.text = strongSelf.showStr;
     }];
+}
+
+- (void)disConnectBT {
+    [[JDYBLEManager shareInstance] disConnectBT:_jdyMessage.peripheral];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,21 +54,12 @@
     
     NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
     if (_jdyMessage.canSendData) {
-        [self.jdyMessage sendData:data type:CBCharacteristicWriteWithResponse sendMessageCompleteBlock:^(NSError *error) {
+        [self.jdyMessage sendData:data type:CBCharacteristicWriteWithoutResponse sendMessageCompleteBlock:^(NSError *error) {
             NSLog(@"发送完成");
         }];
     }
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
