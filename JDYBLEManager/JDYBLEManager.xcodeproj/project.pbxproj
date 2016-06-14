@@ -1,0 +1,271 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FD428D81D0FBD970089812E /* JDYBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD428D51D0FBD970089812E /* JDYBLEManager.m */; };
+		0FD428D91D0FBD970089812E /* JDYBLEMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD428D71D0FBD970089812E /* JDYBLEMessage.m */; };
+		0FD428DC1D0FBDDC0089812E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD428DB1D0FBDDC0089812E /* CoreBluetooth.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0FD428C61D0FBD6C0089812E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0FD428C81D0FBD6C0089812E /* libJDYBLEManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJDYBLEManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FD428D41D0FBD970089812E /* JDYBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JDYBLEManager.h; path = ../../JDYBLE/JDYBLEManager.h; sourceTree = "<group>"; };
+		0FD428D51D0FBD970089812E /* JDYBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JDYBLEManager.m; path = ../../JDYBLE/JDYBLEManager.m; sourceTree = "<group>"; };
+		0FD428D61D0FBD970089812E /* JDYBLEMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JDYBLEMessage.h; path = ../../JDYBLE/JDYBLEMessage.h; sourceTree = "<group>"; };
+		0FD428D71D0FBD970089812E /* JDYBLEMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JDYBLEMessage.m; path = ../../JDYBLE/JDYBLEMessage.m; sourceTree = "<group>"; };
+		0FD428DB1D0FBDDC0089812E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0FD428C51D0FBD6C0089812E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FD428DC1D0FBDDC0089812E /* CoreBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FD428BF1D0FBD6C0089812E = {
+			isa = PBXGroup;
+			children = (
+				0FD428DA1D0FBDCD0089812E /* Frameworks */,
+				0FD428CA1D0FBD6C0089812E /* JDYBLEManager */,
+				0FD428C91D0FBD6C0089812E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0FD428C91D0FBD6C0089812E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FD428C81D0FBD6C0089812E /* libJDYBLEManager.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0FD428CA1D0FBD6C0089812E /* JDYBLEManager */ = {
+			isa = PBXGroup;
+			children = (
+				0FD428D41D0FBD970089812E /* JDYBLEManager.h */,
+				0FD428D51D0FBD970089812E /* JDYBLEManager.m */,
+				0FD428D61D0FBD970089812E /* JDYBLEMessage.h */,
+				0FD428D71D0FBD970089812E /* JDYBLEMessage.m */,
+			);
+			path = JDYBLEManager;
+			sourceTree = "<group>";
+		};
+		0FD428DA1D0FBDCD0089812E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FD428DB1D0FBDDC0089812E /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0FD428C71D0FBD6C0089812E /* JDYBLEManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FD428D11D0FBD6C0089812E /* Build configuration list for PBXNativeTarget "JDYBLEManager" */;
+			buildPhases = (
+				0FD428C41D0FBD6C0089812E /* Sources */,
+				0FD428C51D0FBD6C0089812E /* Frameworks */,
+				0FD428C61D0FBD6C0089812E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JDYBLEManager;
+			productName = JDYBLEManager;
+			productReference = 0FD428C81D0FBD6C0089812E /* libJDYBLEManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0FD428C01D0FBD6C0089812E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = zengqingfu;
+				TargetAttributes = {
+					0FD428C71D0FBD6C0089812E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 0FD428C31D0FBD6C0089812E /* Build configuration list for PBXProject "JDYBLEManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0FD428BF1D0FBD6C0089812E;
+			productRefGroup = 0FD428C91D0FBD6C0089812E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0FD428C71D0FBD6C0089812E /* JDYBLEManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FD428C41D0FBD6C0089812E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FD428D81D0FBD970089812E /* JDYBLEManager.m in Sources */,
+				0FD428D91D0FBD970089812E /* JDYBLEMessage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0FD428CF1D0FBD6C0089812E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0FD428D01D0FBD6C0089812E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0FD428D21D0FBD6C0089812E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0FD428D31D0FBD6C0089812E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FD428C31D0FBD6C0089812E /* Build configuration list for PBXProject "JDYBLEManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FD428CF1D0FBD6C0089812E /* Debug */,
+				0FD428D01D0FBD6C0089812E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FD428D11D0FBD6C0089812E /* Build configuration list for PBXNativeTarget "JDYBLEManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FD428D21D0FBD6C0089812E /* Debug */,
+				0FD428D31D0FBD6C0089812E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0FD428C01D0FBD6C0089812E /* Project object */;
+}

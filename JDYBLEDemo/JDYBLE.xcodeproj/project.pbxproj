@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F67BD731D0E6B0B009920E1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F67BD711D0E6B0B009920E1 /* FirstViewController.m */; };
+		0F67BD741D0E6B0B009920E1 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F67BD721D0E6B0B009920E1 /* FirstViewController.xib */; };
+		0FD428E91D0FD9A20089812E /* libJDYBLEManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD428E81D0FD9A20089812E /* libJDYBLEManager.a */; };
+		0FDD18C51D0DB6FE000AD7A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDD18C41D0DB6FE000AD7A2 /* main.m */; };
+		0FDD18C81D0DB6FE000AD7A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDD18C71D0DB6FE000AD7A2 /* AppDelegate.m */; };
+		0FDD18D01D0DB6FE000AD7A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FDD18CF1D0DB6FE000AD7A2 /* Assets.xcassets */; };
+		0FDD18D31D0DB6FE000AD7A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDD18D11D0DB6FE000AD7A2 /* LaunchScreen.storyboard */; };
+		0FDD18DE1D0DB6FE000AD7A2 /* JDYBLETests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDD18DD1D0DB6FE000AD7A2 /* JDYBLETests.m */; };
+		0FDD18EA1D0DB741000AD7A2 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDD18E91D0DB741000AD7A2 /* CoreBluetooth.framework */; };
+		0FECC02B1D0ECE6A004DCAC4 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FECC0291D0ECE6A004DCAC4 /* DataViewController.m */; };
+		0FECC02C1D0ECE6A004DCAC4 /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FECC02A1D0ECE6A004DCAC4 /* DataViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0FDD18DA1D0DB6FE000AD7A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FDD18B81D0DB6FE000AD7A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FDD18BF1D0DB6FE000AD7A2;
+			remoteInfo = JDYBLE;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F67BD701D0E6B0B009920E1 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		0F67BD711D0E6B0B009920E1 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		0F67BD721D0E6B0B009920E1 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		0FD428E61D0FD9A20089812E /* JDYBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDYBLEManager.h; sourceTree = "<group>"; };
+		0FD428E71D0FD9A20089812E /* JDYBLEMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDYBLEMessage.h; sourceTree = "<group>"; };
+		0FD428E81D0FD9A20089812E /* libJDYBLEManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libJDYBLEManager.a; sourceTree = "<group>"; };
+		0FDD18C01D0DB6FE000AD7A2 /* JDYBLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDYBLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FDD18C41D0DB6FE000AD7A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0FDD18C61D0DB6FE000AD7A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0FDD18C71D0DB6FE000AD7A2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0FDD18CF1D0DB6FE000AD7A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FDD18D21D0DB6FE000AD7A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0FDD18D41D0DB6FE000AD7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FDD18D91D0DB6FE000AD7A2 /* JDYBLETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JDYBLETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FDD18DD1D0DB6FE000AD7A2 /* JDYBLETests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDYBLETests.m; sourceTree = "<group>"; };
+		0FDD18DF1D0DB6FE000AD7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FDD18E91D0DB741000AD7A2 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		0FECC0281D0ECE6A004DCAC4 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		0FECC0291D0ECE6A004DCAC4 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		0FECC02A1D0ECE6A004DCAC4 /* DataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0FDD18BD1D0DB6FE000AD7A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FDD18EA1D0DB741000AD7A2 /* CoreBluetooth.framework in Frameworks */,
+				0FD428E91D0FD9A20089812E /* libJDYBLEManager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FDD18D61D0DB6FE000AD7A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FD428E51D0FD9A20089812E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0FD428E61D0FD9A20089812E /* JDYBLEManager.h */,
+				0FD428E71D0FD9A20089812E /* JDYBLEMessage.h */,
+				0FD428E81D0FD9A20089812E /* libJDYBLEManager.a */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0FDD18B71D0DB6FE000AD7A2 = {
+			isa = PBXGroup;
+			children = (
+				0FD428E51D0FD9A20089812E /* Classes */,
+				0FDD18E81D0DB71C000AD7A2 /* Frameworks */,
+				0FDD18C21D0DB6FE000AD7A2 /* JDYBLE */,
+				0FDD18DC1D0DB6FE000AD7A2 /* JDYBLETests */,
+				0FDD18C11D0DB6FE000AD7A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0FDD18C11D0DB6FE000AD7A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FDD18C01D0DB6FE000AD7A2 /* JDYBLE.app */,
+				0FDD18D91D0DB6FE000AD7A2 /* JDYBLETests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0FDD18C21D0DB6FE000AD7A2 /* JDYBLE */ = {
+			isa = PBXGroup;
+			children = (
+				0FDD18C61D0DB6FE000AD7A2 /* AppDelegate.h */,
+				0FDD18C71D0DB6FE000AD7A2 /* AppDelegate.m */,
+				0F67BD701D0E6B0B009920E1 /* FirstViewController.h */,
+				0F67BD711D0E6B0B009920E1 /* FirstViewController.m */,
+				0F67BD721D0E6B0B009920E1 /* FirstViewController.xib */,
+				0FECC0281D0ECE6A004DCAC4 /* DataViewController.h */,
+				0FECC0291D0ECE6A004DCAC4 /* DataViewController.m */,
+				0FECC02A1D0ECE6A004DCAC4 /* DataViewController.xib */,
+				0FDD18CF1D0DB6FE000AD7A2 /* Assets.xcassets */,
+				0FDD18D11D0DB6FE000AD7A2 /* LaunchScreen.storyboard */,
+				0FDD18D41D0DB6FE000AD7A2 /* Info.plist */,
+				0FDD18C31D0DB6FE000AD7A2 /* Supporting Files */,
+			);
+			path = JDYBLE;
+			sourceTree = "<group>";
+		};
+		0FDD18C31D0DB6FE000AD7A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0FDD18C41D0DB6FE000AD7A2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0FDD18DC1D0DB6FE000AD7A2 /* JDYBLETests */ = {
+			isa = PBXGroup;
+			children = (
+				0FDD18DD1D0DB6FE000AD7A2 /* JDYBLETests.m */,
+				0FDD18DF1D0DB6FE000AD7A2 /* Info.plist */,
+			);
+			path = JDYBLETests;
+			sourceTree = "<group>";
+		};
+		0FDD18E81D0DB71C000AD7A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FDD18E91D0DB741000AD7A2 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0FDD18BF1D0DB6FE000AD7A2 /* JDYBLE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FDD18E21D0DB6FE000AD7A2 /* Build configuration list for PBXNativeTarget "JDYBLE" */;
+			buildPhases = (
+				0FDD18BC1D0DB6FE000AD7A2 /* Sources */,
+				0FDD18BD1D0DB6FE000AD7A2 /* Frameworks */,
+				0FDD18BE1D0DB6FE000AD7A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JDYBLE;
+			productName = JDYBLE;
+			productReference = 0FDD18C01D0DB6FE000AD7A2 /* JDYBLE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0FDD18D81D0DB6FE000AD7A2 /* JDYBLETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FDD18E51D0DB6FE000AD7A2 /* Build configuration list for PBXNativeTarget "JDYBLETests" */;
+			buildPhases = (
+				0FDD18D51D0DB6FE000AD7A2 /* Sources */,
+				0FDD18D61D0DB6FE000AD7A2 /* Frameworks */,
+				0FDD18D71D0DB6FE000AD7A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0FDD18DB1D0DB6FE000AD7A2 /* PBXTargetDependency */,
+			);
+			name = JDYBLETests;
+			productName = JDYBLETests;
+			productReference = 0FDD18D91D0DB6FE000AD7A2 /* JDYBLETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0FDD18B81D0DB6FE000AD7A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = zengqingfu;
+				TargetAttributes = {
+					0FDD18BF1D0DB6FE000AD7A2 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					0FDD18D81D0DB6FE000AD7A2 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0FDD18BF1D0DB6FE000AD7A2;
+					};
+				};
+			};
+			buildConfigurationList = 0FDD18BB1D0DB6FE000AD7A2 /* Build configuration list for PBXProject "JDYBLE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0FDD18B71D0DB6FE000AD7A2;
+			productRefGroup = 0FDD18C11D0DB6FE000AD7A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0FDD18BF1D0DB6FE000AD7A2 /* JDYBLE */,
+				0FDD18D81D0DB6FE000AD7A2 /* JDYBLETests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0FDD18BE1D0DB6FE000AD7A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FECC02C1D0ECE6A004DCAC4 /* DataViewController.xib in Resources */,
+				0FDD18D31D0DB6FE000AD7A2 /* LaunchScreen.storyboard in Resources */,
+				0F67BD741D0E6B0B009920E1 /* FirstViewController.xib in Resources */,
+				0FDD18D01D0DB6FE000AD7A2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FDD18D71D0DB6FE000AD7A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FDD18BC1D0DB6FE000AD7A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FDD18C81D0DB6FE000AD7A2 /* AppDelegate.m in Sources */,
+				0FDD18C51D0DB6FE000AD7A2 /* main.m in Sources */,
+				0F67BD731D0E6B0B009920E1 /* FirstViewController.m in Sources */,
+				0FECC02B1D0ECE6A004DCAC4 /* DataViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FDD18D51D0DB6FE000AD7A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FDD18DE1D0DB6FE000AD7A2 /* JDYBLETests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0FDD18DB1D0DB6FE000AD7A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FDD18BF1D0DB6FE000AD7A2 /* JDYBLE */;
+			targetProxy = 0FDD18DA1D0DB6FE000AD7A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0FDD18D11D0DB6FE000AD7A2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FDD18D21D0DB6FE000AD7A2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0FDD18E01D0DB6FE000AD7A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0FDD18E11D0DB6FE000AD7A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0FDD18E31D0DB6FE000AD7A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JDYBLE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Classes",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cc.devfu.JDYBLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0FDD18E41D0DB6FE000AD7A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JDYBLE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Classes",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cc.devfu.JDYBLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0FDD18E61D0DB6FE000AD7A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JDYBLETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.devfu.JDYBLETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDYBLE.app/JDYBLE";
+			};
+			name = Debug;
+		};
+		0FDD18E71D0DB6FE000AD7A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JDYBLETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.devfu.JDYBLETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDYBLE.app/JDYBLE";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FDD18BB1D0DB6FE000AD7A2 /* Build configuration list for PBXProject "JDYBLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FDD18E01D0DB6FE000AD7A2 /* Debug */,
+				0FDD18E11D0DB6FE000AD7A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FDD18E21D0DB6FE000AD7A2 /* Build configuration list for PBXNativeTarget "JDYBLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FDD18E31D0DB6FE000AD7A2 /* Debug */,
+				0FDD18E41D0DB6FE000AD7A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FDD18E51D0DB6FE000AD7A2 /* Build configuration list for PBXNativeTarget "JDYBLETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FDD18E61D0DB6FE000AD7A2 /* Debug */,
+				0FDD18E71D0DB6FE000AD7A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0FDD18B81D0DB6FE000AD7A2 /* Project object */;
+}
