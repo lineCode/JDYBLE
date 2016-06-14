@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.hidesBackButton = YES;
     self.showStr = [NSMutableString string];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"断开连接" style:UIBarButtonItemStylePlain target:self action:@selector(disConnectBT)];
     self.navigationItem.rightBarButtonItem = item;
@@ -54,7 +55,7 @@
     
     NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
     if (_jdyMessage.canSendData) {
-        [self.jdyMessage sendData:data type:CBCharacteristicWriteWithoutResponse sendMessageCompleteBlock:^(NSError *error) {
+        [self.jdyMessage sendData:data type:CBCharacteristicWriteWithResponse sendMessageCompleteBlock:^(NSError *error) {
             NSLog(@"发送完成");
         }];
     }
