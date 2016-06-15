@@ -21,8 +21,8 @@
 @property (nonatomic, strong)CBUUID *mJDYWriteUUID;
 
 //特征值
-@property (nonatomic, strong)CBCharacteristic *mPosNotifyCharacteristic;
-@property (nonatomic, strong)CBCharacteristic *mPosWriteCharacteristic;
+@property (nonatomic, strong)CBCharacteristic *mJDYNotifyCharacteristic;
+@property (nonatomic, strong)CBCharacteristic *mJDYWriteCharacteristic;
 
 //block
 @property (nonatomic, copy)void (^receivePeripheralMessageBlock)(NSData *data, NSError *error);
@@ -41,9 +41,9 @@
 }
 
 - (void)sendData:(NSData *)data type:(CBCharacteristicWriteType) type sendMessageCompleteBlock:(void (^)(NSError *))block {
-    if (_mPosWriteCharacteristic) {
+    if (_mJDYWriteCharacteristic) {
         self.sendMessageCompleteBlock = block;
-        [_peripheral writeValue:data forCharacteristic:_mPosWriteCharacteristic type:type];
+        [_peripheral writeValue:data forCharacteristic:_mJDYWriteCharacteristic type:type];
     }
 }
 
@@ -61,12 +61,12 @@
     _canReceiveData = NO;
     _canSendData = NO;
     
-    if (_mPosNotifyCharacteristic.isNotifying) {
-        [_peripheral setNotifyValue:NO forCharacteristic:_mPosNotifyCharacteristic];
+    if (_mJDYNotifyCharacteristic.isNotifying) {
+        [_peripheral setNotifyValue:NO forCharacteristic:_mJDYNotifyCharacteristic];
     }
     
-    _mPosNotifyCharacteristic = nil;
-    _mPosWriteCharacteristic = nil;
+    _mJDYNotifyCharacteristic = nil;
+    _mJDYWriteCharacteristic = nil;
 }
 
 #pragma mark --peripheraldelegate
@@ -83,12 +83,12 @@
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
     for (CBCharacteristic *c in service.characteristics) {
         if ([c.UUID.data isEqualToData:_mJDYNofifyUUID.data]) {
-            self.mPosNotifyCharacteristic = c;
+            self.mJDYNotifyCharacteristic = c;
             [_peripheral setNotifyValue:YES forCharacteristic:c];
             _canReceiveData = YES;
             continue;
         }else if ([c.UUID.data isEqualToData:_mJDYWriteUUID.data]) {
-            self.mPosWriteCharacteristic = c;
+            self.mJDYWriteCharacteristic = c;
             _canSendData= YES;
             continue;
         }
