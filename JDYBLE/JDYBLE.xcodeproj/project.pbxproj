@@ -198,6 +198,7 @@
 				TargetAttributes = {
 					0FDD18BF1D0DB6FE000AD7A2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2P33RFYAZA;
 					};
 					0FDD18D81D0DB6FE000AD7A2 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -375,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2P33RFYAZA;
 				INFOPLIST_FILE = JDYBLE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -387,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2P33RFYAZA;
 				INFOPLIST_FILE = JDYBLE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
